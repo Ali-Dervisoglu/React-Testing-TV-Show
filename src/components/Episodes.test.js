@@ -13,7 +13,6 @@ test("re-render successfully with episodes", () => {
     expect(newEpisodes).toHaveLength(2);
 });
 
-
 const mockData = [
     {
         "id": 553946,
@@ -50,19 +49,3 @@ const mockData = [
         "_links": {"self": {"href": "http://api.tvmaze.com/episodes/1576473"}}
     }
 ];
-
-// test("s", async () => {
-//     mockFetchShow.mockResolvedValueOnce(mockData);
-//     const { getByText, getByTestId, getAllByTestId } = render(<App />);
-
-//     waitForElementToBeRemoved(getByText(/fetching data/i)).then(() => {
-//         const poster = getAllByTestId(/poster/i);
-//         expect(poster).toHaveLength(1);
-
-//         // const dropdown = getByTestId(/dropdown/i);
-//         // fireEvent.click(dropdown);
-
-//         const selectSeason = getByText(/select a season/i);
-//         fireEvent.click(selectSeason);
-//     })
-// });
