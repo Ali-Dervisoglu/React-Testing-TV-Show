@@ -5,15 +5,8 @@ import Episodes from "./Episodes.js";
 test("re-render successfully with episodes", () => {
     const {rerender, queryAllByTestId} = render(<Episodes episodes={[]}/>);
     const episodes = queryAllByTestId(/episode/ig);
-    expect(episodes.length).toBeLessThanOrEqual(0);//todo: why does this test fail?
-    expect(episodes).toStrictEqual([]);//todo: this test fails, expected [], received Array
-    // [
-    //     +   <div
-    //     +     class="episodes"
-    //     +     data-testid="episodes"
-    //     +   />,
-    //     + ]
-    //???How did the queryAllByTestId(/episode/ig) return the div for Episodes?
+    expect(episodes.length).toBeLessThanOrEqual(0);
+    expect(episodes).toStrictEqual([]);    
 
     rerender(<Episodes episodes={mockData}/>);
     const newEpisodes = queryAllByTestId(/episode/i);
